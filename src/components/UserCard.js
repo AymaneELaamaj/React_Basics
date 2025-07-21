@@ -1,19 +1,13 @@
-function UserCard({ name, isActive }) {
-    return (
-      <div style={{
-        border: '1px solid #ccc',
-        borderRadius: '8px',
-        padding: '1rem',
-        marginBottom: '1rem',
-        background: isActive ? '#e0ffe0' : '#ffe0e0'
-      }}>
-        <h3>{name}</h3>
-        <p>
-          Statut : {isActive ? "✅ Actif" : "❌ Inactif"}
-        </p>
-      </div>
-    );
-  }
+function UserCard({ login, url }) {
+  return (
+    <div style={{ border: '1px solid #ccc', padding: '1rem', marginBottom: '1rem', borderRadius: '8px' }}>
+      <h3>{login} </h3>
+      <a href={url} target="_blank" rel="noreferrer">Voir le profil GitHub</a>
+    </div>
+  );
+}
+
+export default UserCard;
+
   
-  export default UserCard;
   
